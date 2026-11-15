@@ -21,6 +21,8 @@ long long math_factorial(int n, int *status);
 double math_power(double base, int exponent);
 int math_is_prime(int n);
 int math_gcd(int a, int b);
+int math_lcm(int a, int b);
+int math_clamp(int value, int min_val, int max_val);
 long long math_fibonacci(int n, int *status);
 
 // Geometry utilities
