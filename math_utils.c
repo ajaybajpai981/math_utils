@@ -93,6 +93,20 @@ int math_gcd(int a, int b) {
     return a;
 }
 
+int math_lcm(int a, int b) {
+    if (a == 0 || b == 0) return 0;
+    int gcd = math_gcd(a, b);
+    long long prod = (long long)a * b;
+    if (prod < 0) prod = -prod;
+    return (int)(prod / gcd);
+}
+
+int math_clamp(int value, int min_val, int max_val) {
+    if (value < min_val) return min_val;
+    if (value > max_val) return max_val;
+    return value;
+}
+
 long long math_fibonacci(int n, int *status) {
     if (n < 0) {
         if (status) *status = MATH_ERR_NEGATIVE_VAL;
