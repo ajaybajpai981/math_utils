@@ -20,6 +20,8 @@ double math_divide(double a, double b, int *status);
 long long math_factorial(int n, int *status);
 double math_power(double base, int exponent);
 int math_is_prime(int n);
+int math_gcd(int a, int b);
+long long math_fibonacci(int n, int *status);
 
 // Geometry utilities
 double math_circle_area(double radius, int *status);

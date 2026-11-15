@@ -81,3 +81,32 @@ double math_rectangle_area(double width, double height, int *status) {
     if (status) *status = MATH_SUCCESS;
     return width * height;
 }
+
+int math_gcd(int a, int b) {
+    if (a < 0) a = -a;
+    if (b < 0) b = -b;
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+long long math_fibonacci(int n, int *status) {
+    if (n < 0) {
+        if (status) *status = MATH_ERR_NEGATIVE_VAL;
+        return -1;
+    }
+    if (status) *status = MATH_SUCCESS;
+    if (n == 0) return 0;
+    if (n == 1) return 1;
+
+    long long prev = 0, curr = 1;
+    for (int i = 2; i <= n; i++) {
+        long long next = prev + curr;
+        prev = curr;
+        curr = next;
+    }
+    return curr;
+}
