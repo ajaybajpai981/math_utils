@@ -1,7 +1,7 @@
 #include "math_utils.h"
 
 #define PI 3.14159265358979323846
-#ajay
+//ajay
 int math_add(int a, int b) {
     return a + b;
 }
